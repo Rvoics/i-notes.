@@ -1,0 +1,367 @@
+.app-shell {
+  min-height: 100vh;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.auth-page {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.hero-panel,
+.form-panel,
+.summary-card,
+.composer,
+.note-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(91, 95, 129, 0.16);
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+  border-radius: 24px;
+}
+
+.hero-panel {
+  padding: 36px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #7c3aed;
+}
+
+.hero-copy {
+  font-size: 1.05rem;
+  color: #475569;
+  max-width: 560px;
+}
+
+.feature-list {
+  padding-left: 20px;
+  color: #334155;
+  display: grid;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.form-panel {
+  padding: 28px;
+}
+
+.auth-switch {
+  display: inline-flex;
+  padding: 6px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  margin-bottom: 18px;
+}
+
+.auth-switch button {
+  border: none;
+  background: transparent;
+  color: #475569;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.auth-switch .active {
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  color: white;
+}
+
+.auth-form,
+.composer {
+  display: grid;
+  gap: 12px;
+}
+
+.auth-form input,
+.composer input,
+.composer textarea,
+.composer select {
+  width: 100%;
+  border: 1px solid #d9def2;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.auth-form input:focus,
+.composer input:focus,
+.composer textarea:focus,
+.composer select:focus {
+  outline: 2px solid rgba(124, 58, 237, 0.2);
+  border-color: #7c3aed;
+}
+
+.primary-btn,
+.ghost-btn,
+.delete-btn,
+.chip {
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  color: white;
+  padding: 11px 16px;
+  font-weight: 700;
+}
+
+.ghost-btn {
+  background: #eef2ff;
+  color: #4338ca;
+  padding: 10px 14px;
+}
+
+.message-box {
+  margin-top: 16px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #f5f3ff;
+  color: #5b21b6;
+}
+
+.logo-mark {
+  position: relative;
+  width: 78px;
+  height: 78px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.logo-mark:hover {
+  transform: translateY(-3px) scale(1.03);
+  filter: drop-shadow(0 8px 16px rgba(99, 102, 241, 0.25));
+}
+
+.logo-mark:hover .logo-ring {
+  transform: rotate(0deg) scale(1.04);
+}
+
+.logo-mark:hover .logo-core {
+  transform: rotate(-8deg) scale(1.04);
+}
+
+.logo-ring {
+  position: absolute;
+  inset: 0;
+  border: 4px solid #7c3aed;
+  border-radius: 22px;
+  transform: rotate(12deg);
+  animation: wobble 2.6s ease-in-out infinite;
+  transition: transform 220ms ease;
+}
+
+.logo-core {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  font-weight: 800;
+  box-shadow: 0 10px 24px rgba(99, 102, 241, 0.28);
+  animation: float 2.3s ease-in-out infinite;
+  transition: transform 220ms ease;
+  z-index: 1;
+}
+
+.logo-spark {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 8px;
+  right: 6px;
+  border-radius: 50%;
+  background: #f59e0b;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.18);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-row h1 {
+  margin: 0;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-pill {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #ede9fe;
+  color: #5b21b6;
+  font-weight: 700;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 20px;
+}
+
+.summary-card,
+.composer,
+.note-card {
+  padding: 20px;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.stats-row div {
+  background: #f8fafc;
+  border-radius: 14px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stats-row strong {
+  font-size: 1.2rem;
+  color: #111827;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.chip {
+  background: #eef2ff;
+  color: #4338ca;
+  padding: 8px 12px;
+}
+
+.chip.active {
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  color: white;
+}
+
+.composer-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.notes-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.note-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.note-category {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #ede9fe;
+  color: #6d28d9;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 7px 10px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 26px;
+  background: #f8fafc;
+  border-radius: 18px;
+  color: #475569;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: rotate(12deg) scale(1);
+  }
+  50% {
+    transform: rotate(-8deg) scale(1.02);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.75;
+  }
+}
+
+@media (max-width: 860px) {
+  .auth-page,
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
